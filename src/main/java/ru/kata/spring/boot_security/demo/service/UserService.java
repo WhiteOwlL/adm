@@ -21,7 +21,7 @@ public class UserService implements UserDetailsService {
     }
 
     @Override
-    @Transactional(readOnly = true)   // ←←← ВОТ ЭТО ДОБАВИЛИ
+    @Transactional(readOnly = true)  
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> userOptional = userRepository.findByUsername(username);
 
